@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Welcome!</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="my-login.css">
+	<style>
+		.btn
+		{
+			transition: transform 0.2s ease-in-out;
+			cursor:pointer;
+		}
+		.btn:hover
+		{
+			transform:scale(1.1);
+		}
+	</style>
+</head>
+
+<body class="my-login-page">
+	<section class="h-100" style="border: 2px solid black;background-image:url('doctor.jpeg');background-repeat:no-repeat;background-size:cover">
+		<div class="container" style="background-color:#b1c4d4; width:450px;height:450px;transform:translate(-300px,80px);border-radius:20px">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper" >
+					<div class="brand">
+						<img src="loginimg.png" alt="logo">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title" style="text-align: center;font-size:33px;font-family:'Segoe UI';text-shadow: 1px;"><b>BOOK A DOCTOR</b></h4>
+							<h4 style="text-align:center">Select an Option</h4>
+						</div>
+						<div style="display:flex;justify-content: center">
+							<a th:href="@{/patlog}" class="btn btn-primary" id="btn" style="margin:10px;">Patient</a>
+							<a th:href="@{/doclog}" class="btn btn-primary" id="btn"style="margin:10px;">Doctor</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
